@@ -1,0 +1,50 @@
+@import "sanhab-components-library/src/assets/styles/variable/variable"
+
+.print_wrapper
+    margin:0
+
+@page
+    size: A4
+    margin: 0
+    padding: 0
+
+
+
+@media print
+
+    :global(.sanhab-layout-footer)
+        display: none !important
+
+    :global(.sanhab-layout-header)
+        display: none !important
+
+    :global(.sanhab-layout .sanhab-layout-content)
+        padding: 0 !important
+
+    :global(.sanhab-layout .sanhab-layout-content .sanhab-layout-content-body)
+        padding: 0 !important
+        border: none !important
+
+    .printBox
+        display: none !important
+
+    .page
+        margin: 0
+        border: none
+        border-radius: initial
+        width: initial
+        min-height: initial
+        box-shadow: initial
+        background: initial
+        page-break-after: always
+
+        .table
+            .title
+                background-color: $gray-6 !important
+
+            .item
+                &:nth-last-child(n-1)
+                    border-top: 2px solid $gray-6
+
+            .borderLeft
+                border-left: 2px solid $gray-6
